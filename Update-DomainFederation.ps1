@@ -36,7 +36,12 @@
 
 .EXAMPLE
     .\Update-DomainFederation.ps1 -TenantId "..." -Domain "customer.com" -MetadataUri "https://tenant.workspaceoneaccess/SAAS/API/1.0/GET/metadata/idp.xml" -WhatIf
+    
+.EXAMPLE
+    on Windows PowerShell run using pwsh.exe as it requires Powershell 7.x and default for running PS1 files is using powershell.exe in version 5.1
+    pwsh.exe -File .\Update-DomainFederation.ps1 -TenantId "..." -Domain "customer.com" -MetadataUri "https://tenant.workspaceoneaccess/SAAS/API/1.0/GET/metadata/idp.xml" -FederatedIdpMfaBehavior "enforceMfaByFederatedIdp"    
 #>
+#requires -Version 7.0
 
 [CmdletBinding()]
 param(
