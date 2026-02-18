@@ -142,7 +142,7 @@ function test-prereqs {
 
 try {
     Write-Host "Starting update of domain federation configuration..." -ForegroundColor Cyan
-    Write-Host "Loading the Graph module and connectingm authorization in browser..." -ForegroundColor Cyan
+    Write-Host "Loading the Graph module and connecting authorization in browser..." -ForegroundColor Cyan
     # Ensure module and connect
     test-prereqs
     $scopes = @('Domain-InternalFederation.ReadWrite.All','Domain.ReadWrite.All')
