@@ -132,7 +132,7 @@ function test-prereqs {
             Write-Host "Microsoft.Graph module not found. Installing..." -ForegroundColor Yellow
             Install-Module -Name Microsoft.Graph -Scope CurrentUser -Force -AllowClobber -ErrorAction Stop
         }
-        Import-Module Microsoft.Graph -ErrorAction Stop
+        #Import-Module Microsoft.Graph -ErrorAction Stop
     }
     catch {
         Write-Error "Failed to install/import Microsoft.Graph: $_"
